@@ -12,7 +12,7 @@ This runbook turns DispatchPilot from demo mode into live Qwen/Alibaba mode.
 ```bash
 export DASHSCOPE_API_KEY=...
 export DASHSCOPE_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1
-export QWEN_MODEL=qwen-plus
+export QWEN_MODEL=qwen-flash-us
 ```
 
 ## 1. Verify Qwen Cloud before deploy
@@ -32,6 +32,8 @@ Submit-ready output must include:
 ```
 
 If it returns `"simulated"`, the API key is missing or the Qwen call failed.
+
+If the diagnostic shows `AllocationQuota.FreeTierOnly`, the API key is valid enough to reach Model Studio, but the selected model's free tier is exhausted while paid calls are disabled. Verification has already reproduced this on `qwen-plus`, `qwen-flash-us`, and `qwen3.6-flash`, so the next fix is console-side: activate hackathon credits or disable "use free tier only" in Model Studio and keep the one-call-per-packet cost control in place.
 
 ## 2. Deploy the API
 

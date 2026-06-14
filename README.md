@@ -41,7 +41,7 @@ Copy `.env.example` to `.env` and set:
 ```bash
 DASHSCOPE_API_KEY=...
 DASHSCOPE_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1
-QWEN_MODEL=qwen-plus
+QWEN_MODEL=qwen-flash-us
 ```
 
 The API calls:
@@ -59,6 +59,8 @@ npm run verify:qwen
 ```
 
 The output must show `"qwenMode": "live"` before the project should be marked ready to submit. `"simulated"` is acceptable for local development only.
+
+If the verifier returns `AllocationQuota.FreeTierOnly`, the key is visible and Model Studio was reached, but generation is blocked because the selected model's free tier is exhausted while paid calls are disabled. `qwen-flash-us`, `qwen3.6-flash`, and `qwen-plus` have all hit this account-level free-tier-only blocker in verification. Activate hackathon credits or disable "use free tier only" in the Model Studio console with a strict spend cap.
 
 ## API
 

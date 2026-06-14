@@ -25,7 +25,13 @@ npm run verify:qwen
 - Public architecture PNG returns 200: https://airowe.github.io/dispatchpilot-qwen/architecture.png.
 - `ffprobe` reports the screen recording as VP8 WebM, 1280x720, 4.32 seconds.
 - `npm audit --audit-level=high` passes. Remaining reported advisories are moderate Expo transitive dependency issues whose available fix requires a breaking Expo 56 upgrade.
-- `npm run verify:qwen` currently returns `"qwenMode": "simulated"` because no `DASHSCOPE_API_KEY` is configured in this environment.
+- `npm run verify:qwen` now sees `DASHSCOPE_API_KEY`, reaches Qwen, and returns `403 AllocationQuota.FreeTierOnly`.
+- Tested model outcomes on the US endpoint:
+  - `qwen-plus`: `403 AllocationQuota.FreeTierOnly`
+  - `qwen-flash-us`: `403 AllocationQuota.FreeTierOnly`
+  - `qwen3.6-flash`: `403 AllocationQuota.FreeTierOnly`
+  - `qwen-turbo`: `404 model_not_found`
+- The remaining live-Qwen blocker is console-side: activate hackathon credits or disable "use free tier only" with a strict spend cap.
 
 ## Submit-ready gates still open
 
