@@ -115,7 +115,7 @@ export default function App() {
       </View>
 
       <View style={[styles.workspace, isWide ? styles.workspaceWide : styles.workspaceNarrow]}>
-        <View style={styles.leftPane}>
+        <View style={[styles.leftPane, !isWide && styles.leftPaneNarrow]}>
           <SectionLabel icon={<Activity size={18} color={colors.blue} />} title="Incident intake" />
           <View style={styles.scenarioRow}>
             {scenarios.map((scenario) => (
@@ -391,6 +391,9 @@ const styles = StyleSheet.create({
     gap: 12,
     minWidth: 0
   },
+  leftPaneNarrow: {
+    marginBottom: 14
+  },
   rightPane: {
     flex: 1.1,
     minWidth: 0
@@ -464,7 +467,8 @@ const styles = StyleSheet.create({
     lineHeight: 21
   },
   primaryButton: {
-    minHeight: 48,
+    height: 48,
+    flexShrink: 0,
     borderRadius: 8,
     borderCurve: "continuous",
     backgroundColor: colors.ink,

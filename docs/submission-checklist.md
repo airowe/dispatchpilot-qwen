@@ -9,6 +9,7 @@
 - [x] Qwen Cloud code path.
 - [x] Alibaba Cloud deployment proof file.
 - [x] Hosted demo URL: https://airowe.github.io/dispatchpilot-qwen/
+- [x] Hosted demo can generate a packet and approve a customer update (`npm run verify:hosted`).
 - [ ] Qwen Cloud account verified.
 - [ ] Live `DASHSCOPE_API_KEY` run captured.
 - [ ] API deployed to Alibaba Function Compute.
@@ -21,7 +22,7 @@ Do not call this ready to submit until all four external gates are verified:
 
 1. `npm run verify:qwen` returns `"qwenMode": "live"`.
 2. `/health` responds from an Alibaba Cloud endpoint, not only localhost.
-3. The hosted app URL loads and can generate a packet.
+3. The hosted app URL loads and can generate a packet. Current verifier: `npm run verify:hosted`.
 4. The Devpost draft has the public repo, architecture diagram, hosted URL, and public video.
 
 ## Devpost summary draft

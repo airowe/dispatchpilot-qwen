@@ -72,6 +72,7 @@ curl -s http://localhost:8787/api/agent/run \
 - Architecture: `docs/architecture.md`
 - Demo script: `docs/demo-script.md`
 - Submission checklist: `docs/submission-checklist.md`
+- Verification log: `docs/verification.md`
 - Alibaba Function Compute proof path: `deploy/alibaba-function-compute.yaml`
 - Qwen client proof: `api/src/qwenClient.ts`
 
