@@ -5,6 +5,8 @@ DispatchPilot is a mobile Autopilot Agent for the Global AI Hackathon Series wit
 Target track: **Track 4 - Autopilot Agent**  
 Secondary angle: **Track 1 - MemoryAgent**
 
+Public repo: https://github.com/airowe/dispatchpilot-qwen
+
 ## Why it fits the event
 
 - Qwen Cloud is the model layer through Alibaba Cloud Model Studio's OpenAI-compatible chat API.

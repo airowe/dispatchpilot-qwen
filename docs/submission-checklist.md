@@ -2,7 +2,7 @@
 
 - [x] Fresh project for Qwen Cloud AI Agent.
 - [x] Track selected: Track 4, Autopilot Agent.
-- [x] Public/open-source-ready repo structure.
+- [x] Public repo: https://github.com/airowe/dispatchpilot-qwen
 - [x] MIT license.
 - [x] Architecture diagram source.
 - [x] Demo script.
