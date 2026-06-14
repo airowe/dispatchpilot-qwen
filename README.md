@@ -6,6 +6,7 @@ Target track: **Track 4 - Autopilot Agent**
 Secondary angle: **Track 1 - MemoryAgent**
 
 Public repo: https://github.com/airowe/dispatchpilot-qwen
+Hosted demo: https://airowe.github.io/dispatchpilot-qwen/
 
 ## Why it fits the event
 

@@ -8,10 +8,10 @@
 - [x] Demo script.
 - [x] Qwen Cloud code path.
 - [x] Alibaba Cloud deployment proof file.
+- [x] Hosted demo URL: https://airowe.github.io/dispatchpilot-qwen/
 - [ ] Qwen Cloud account verified.
 - [ ] Live `DASHSCOPE_API_KEY` run captured.
 - [ ] API deployed to Alibaba Function Compute.
-- [ ] Hosted app URL created.
 - [ ] Public demo video under 3 minutes.
 - [ ] Devpost draft filled and submitted.
 
