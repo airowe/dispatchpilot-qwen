@@ -25,6 +25,7 @@ flowchart LR
 
 - **Qwen Cloud / Alibaba Cloud Model Studio:** `api/src/qwenClient.ts` calls the OpenAI-compatible chat completions endpoint.
 - **Alibaba Cloud Function Compute:** `deploy/alibaba-function-compute.yaml` defines the planned HTTP backend deployment.
+- **Submission diagram:** `docs/architecture.svg` and `docs/architecture.png`.
 
 ## Demo mode
 

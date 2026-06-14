@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">DispatchPilot architecture</title>
+  <desc id="desc">Expo mobile app sends an incident to an Alibaba Function Compute API, which builds operating memory context, calls Qwen Cloud, and returns a dispatch packet for human approval.</desc>
+  <rect width="1200" height="720" fill="#f7f8fa"/>
+  <text x="70" y="80" fill="#17202a" font-family="Arial, sans-serif" font-size="42" font-weight="800">DispatchPilot Architecture</text>
+  <text x="72" y="116" fill="#596a7a" font-family="Arial, sans-serif" font-size="18" font-weight="600">Qwen Autopilot Agent for field-service dispatch</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#246bfe"/>
+    </marker>
+    <style>
+      .box { fill: #ffffff; stroke: #d9e0e7; stroke-width: 2; rx: 12; }
+      .title { fill: #17202a; font: 800 22px Arial, sans-serif; }
+      .body { fill: #26313d; font: 600 15px Arial, sans-serif; }
+      .note { fill: #596a7a; font: 600 14px Arial, sans-serif; }
+      .tag { fill: #eaf1ff; stroke: #c6daff; stroke-width: 1.5; rx: 18; }
+      .tagText { fill: #246bfe; font: 800 13px Arial, sans-serif; }
+      .line { stroke: #246bfe; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="box" x="70" y="185" width="230" height="170"/>
+  <text class="title" x="95" y="230">Expo App</text>
+  <text class="body" x="95" y="264">Mobile incident intake</text>
+  <text class="body" x="95" y="291">Scenario picker</text>
+  <text class="body" x="95" y="318">Approval controls</text>
+  <rect class="tag" x="95" y="375" width="148" height="34"/>
+  <text class="tagText" x="113" y="397">iOS / Android / Web</text>
+
+  <rect class="box" x="380" y="185" width="250" height="170"/>
+  <text class="title" x="405" y="230">Function API</text>
+  <text class="body" x="405" y="264">/health</text>
+  <text class="body" x="405" y="291">/api/agent/run</text>
+  <text class="body" x="405" y="318">CORS for hosted app</text>
+  <rect class="tag" x="405" y="375" width="154" height="34"/>
+  <text class="tagText" x="423" y="397">Alibaba Function Compute</text>
+
+  <rect class="box" x="710" y="185" width="230" height="170"/>
+  <text class="title" x="735" y="230">Agent Engine</text>
+  <text class="body" x="735" y="264">Operating memory</text>
+  <text class="body" x="735" y="291">Prompt builder</text>
+  <text class="body" x="735" y="318">Schema merge/fallback</text>
+  <rect class="tag" x="735" y="375" width="132" height="34"/>
+  <text class="tagText" x="753" y="397">Autopilot Agent</text>
+
+  <rect class="box" x="380" y="470" width="250" height="145"/>
+  <text class="title" x="405" y="514">Qwen Cloud</text>
+  <text class="body" x="405" y="548">OpenAI-compatible</text>
+  <text class="body" x="405" y="575">chat completions</text>
+  <rect class="tag" x="405" y="635" width="154" height="34"/>
+  <text class="tagText" x="423" y="657">Alibaba Model Studio</text>
+
+  <rect class="box" x="710" y="470" width="300" height="145"/>
+  <text class="title" x="735" y="514">Dispatch Packet</text>
+  <text class="body" x="735" y="548">Risk, crew, parts, runbook</text>
+  <text class="body" x="735" y="575">Customer update and audit trail</text>
+  <rect class="tag" x="735" y="635" width="176" height="34"/>
+  <text class="tagText" x="753" y="657">Human-in-loop approval</text>
+
+  <path class="line" d="M300 270 H370"/>
+  <path class="line" d="M630 270 H700"/>
+  <path class="line" d="M825 355 C825 420 650 420 520 470"/>
+  <path class="line" d="M630 542 H700"/>
+  <path class="line" d="M710 542 C560 455 385 432 300 355"/>
+
+  <text class="note" x="72" y="680">Demo mode uses the same packet schema without cloud calls. Live mode requires DASHSCOPE_API_KEY and one Qwen chat completion per dispatch packet.</text>
+</svg>

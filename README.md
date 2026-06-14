@@ -26,6 +26,12 @@ npm run web
 
 Set `EXPO_PUBLIC_API_BASE_URL=http://localhost:8787` for the Expo app to call the local API. Without an API URL, the app runs its deterministic local demo packet.
 
+For the hosted GitHub Pages build, pass a deployed API URL without rebuilding:
+
+```text
+https://airowe.github.io/dispatchpilot-qwen/?api=https://YOUR-ALIBABA-ENDPOINT
+```
+
 ## Live Qwen mode
 
 Copy `.env.example` to `.env` and set:
@@ -70,10 +76,14 @@ curl -s http://localhost:8787/api/agent/run \
 ## Submission assets
 
 - Architecture: `docs/architecture.md`
+- Architecture SVG: `docs/architecture.svg`
+- Architecture PNG: `docs/architecture.png`
 - Demo script: `docs/demo-script.md`
+- Devpost draft: `docs/devpost-submission.md`
 - Submission checklist: `docs/submission-checklist.md`
 - Verification log: `docs/verification.md`
 - Alibaba Function Compute proof path: `deploy/alibaba-function-compute.yaml`
+- Alibaba deploy runbook: `deploy/README.md`
 - Qwen client proof: `api/src/qwenClient.ts`
 
 ## Cost controls

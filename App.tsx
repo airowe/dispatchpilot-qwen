@@ -24,11 +24,10 @@ import { createDispatchPacket } from "./src/lib/agentEngine";
 import { scenarios } from "./src/lib/fixtures";
 import type { DispatchAction, DispatchPacket, IncidentInput, Scenario } from "./src/lib/types";
 
-const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL;
-
 export default function App() {
   const { width } = useWindowDimensions();
   const isWide = width >= 860;
+  const apiBaseUrl = useMemo(() => getApiBaseUrl(), []);
   const [selectedScenario, setSelectedScenario] = useState<Scenario>(scenarios[0]);
   const [note, setNote] = useState(selectedScenario.note);
   const [packet, setPacket] = useState<DispatchPacket | null>(null);
@@ -286,6 +285,26 @@ function ActionRow({ action, approved, onToggle }: { action: DispatchAction; app
       </View>
     </Pressable>
   );
+}
+
+function getApiBaseUrl(): string | undefined {
+  const fromEnv = process.env.EXPO_PUBLIC_API_BASE_URL;
+  if (fromEnv) {
+    return stripTrailingSlash(fromEnv);
+  }
+
+  if (typeof window !== "undefined") {
+    const fromQuery = new URLSearchParams(window.location.search).get("api");
+    if (fromQuery) {
+      return stripTrailingSlash(fromQuery);
+    }
+  }
+
+  return undefined;
+}
+
+function stripTrailingSlash(value: string): string {
+  return value.replace(/\/$/, "");
 }
 
 const colors = {

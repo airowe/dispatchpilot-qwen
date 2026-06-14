@@ -5,7 +5,10 @@
 - [x] Public repo: https://github.com/airowe/dispatchpilot-qwen
 - [x] MIT license.
 - [x] Architecture diagram source.
+- [x] Architecture diagram SVG: `docs/architecture.svg`.
+- [x] Architecture diagram PNG: `docs/architecture.png`.
 - [x] Demo script.
+- [x] Devpost draft: `docs/devpost-submission.md`.
 - [x] Qwen Cloud code path.
 - [x] Alibaba Cloud deployment proof file.
 - [x] Hosted demo URL: https://airowe.github.io/dispatchpilot-qwen/
@@ -22,7 +25,7 @@ Do not call this ready to submit until all four external gates are verified:
 
 1. `npm run verify:qwen` returns `"qwenMode": "live"`.
 2. `/health` responds from an Alibaba Cloud endpoint, not only localhost.
-3. The hosted app URL loads and can generate a packet. Current verifier: `npm run verify:hosted`.
+3. The hosted app URL loads and can generate a packet. Current verifier: `npm run verify:hosted`. After Alibaba deploy, use `https://airowe.github.io/dispatchpilot-qwen/?api=<alibaba-api-url>` to test live API mode.
 4. The Devpost draft has the public repo, architecture diagram, hosted URL, and public video.
 
 ## Devpost summary draft
