@@ -7,6 +7,8 @@ Secondary angle: **Track 1 - MemoryAgent**
 
 Public repo: https://github.com/airowe/dispatchpilot-qwen
 Hosted demo: https://airowe.github.io/dispatchpilot-qwen/
+Public screen recording asset: https://airowe.github.io/dispatchpilot-qwen/dispatchpilot-demo.webm
+Public architecture PNG: https://airowe.github.io/dispatchpilot-qwen/architecture.png
 
 ## Why it fits the event
 

@@ -20,7 +20,9 @@ Secondary fit: Track 1, MemoryAgent.
 - Hosted demo: https://airowe.github.io/dispatchpilot-qwen/
 - Hosted demo with live API after deployment: `https://airowe.github.io/dispatchpilot-qwen/?api=<alibaba-api-url>`
 - Architecture diagram: `docs/architecture.svg`
+- Public architecture PNG: https://airowe.github.io/dispatchpilot-qwen/architecture.png
 - Local screen recording asset: `docs/dispatchpilot-demo.webm`
+- Public screen recording asset: https://airowe.github.io/dispatchpilot-qwen/dispatchpilot-demo.webm
 - Public YouTube/Vimeo/Youku demo video: TODO
 
 ## Inspiration
