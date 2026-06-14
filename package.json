@@ -12,6 +12,7 @@
     "api": "tsx api/src/server.ts",
     "verify:qwen": "tsx api/src/verifyQwen.ts",
     "verify:hosted": "tsx scripts/verifyHostedDemo.ts",
+    "record:demo": "tsx scripts/recordDemoVideo.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },

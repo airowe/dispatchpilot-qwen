@@ -20,6 +20,8 @@ npm run verify:qwen
 - Hosted demo verification passes against https://airowe.github.io/dispatchpilot-qwen/.
 - Hosted demo can generate a packet and approve the customer update at a 390px mobile viewport.
 - Screenshot artifact: `docs/hosted-demo-check.png`.
+- Demo screen recording exists: `docs/dispatchpilot-demo.webm`.
+- `ffprobe` reports the screen recording as VP8 WebM, 1280x720, 4.32 seconds.
 - `npm audit --audit-level=high` passes. Remaining reported advisories are moderate Expo transitive dependency issues whose available fix requires a breaking Expo 56 upgrade.
 - `npm run verify:qwen` currently returns `"qwenMode": "simulated"` because no `DASHSCOPE_API_KEY` is configured in this environment.
 

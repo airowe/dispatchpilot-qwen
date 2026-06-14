@@ -2,6 +2,14 @@
 
 Target length: 2:30 to 2:45.
 
+Current silent screen-recording helper:
+
+```bash
+npm run record:demo
+```
+
+It writes `docs/dispatchpilot-demo.webm`. Upload the final narrated version to YouTube, Vimeo, or Youku for Devpost.
+
 ## 0:00-0:20 - The problem
 
 Show the mobile app with the "Freezer emergency" scenario selected. The incident note says the freezer is warming, product loss is close, a part may be needed, and the customer needs a real ETA.

@@ -13,6 +13,7 @@
 - [x] Alibaba Cloud deployment proof file.
 - [x] Hosted demo URL: https://airowe.github.io/dispatchpilot-qwen/
 - [x] Hosted demo can generate a packet and approve a customer update (`npm run verify:hosted`).
+- [x] Demo screen recording generated (`npm run record:demo`): `docs/dispatchpilot-demo.webm`.
 - [ ] Qwen Cloud account verified.
 - [ ] Live `DASHSCOPE_API_KEY` run captured.
 - [ ] API deployed to Alibaba Function Compute.
