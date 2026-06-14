@@ -1,0 +1,42 @@
+# Alibaba Cloud Function Compute deployment proof for DispatchPilot.
+# Intended target: HTTP API backend that serves /health and /api/agent/run.
+# Keep DASHSCOPE_API_KEY as a server-side secret; never expose it in Expo.
+
+edition: 3.0.0
+name: dispatchpilot
+
+resources:
+  dispatchpilot-api:
+    component: fc3
+    props:
+      region: us-east-1
+      functionName: dispatchpilot-api
+      description: Qwen-powered field-service dispatch autopilot API
+      runtime: custom.debian10
+      cpu: 0.35
+      memorySize: 512
+      diskSize: 512
+      timeout: 30
+      instanceConcurrency: 10
+      code: ../
+      customRuntimeConfig:
+        command:
+          - npm
+          - run
+          - api
+      environmentVariables:
+        NODE_ENV: production
+        PORT: "9000"
+        DASHSCOPE_BASE_URL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+        QWEN_MODEL: qwen-plus
+      triggers:
+        - triggerName: dispatchpilot-http
+          triggerType: http
+          description: Public HTTP endpoint for the DispatchPilot demo API
+          qualifier: LATEST
+          triggerConfig:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - OPTIONS

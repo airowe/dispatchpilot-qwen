@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "DispatchPilot",
+    "slug": "dispatchpilot",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    }
+  }
+}
